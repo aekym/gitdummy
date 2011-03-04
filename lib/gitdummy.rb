@@ -1,0 +1,3 @@
+module Gitdummy
+  # Your code goes here...
+end
