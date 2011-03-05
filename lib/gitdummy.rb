@@ -5,6 +5,7 @@ require 'thor'
 
 module Gitdummy
   class Cli < Thor
+    default_task :check
 
     def initialize(*args)
       super
