@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.join(File.dirname(__FILE__), '../lib/gitdummy')
+require File.join(File.dirname(File.realpath(__FILE__)), '../lib/gitdummy')
 
 Gitdummy::Cli.start
 
