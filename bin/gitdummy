@@ -1,14 +1,6 @@
 #!/usr/bin/env ruby
 
+require File.join(File.dirname(__FILE__), '../lib/gitdummy')
 
-require 'grit'
-require File.join(File.dirname(__FILE__), '../lib/gitdummy.rb')
-
-
-a = Gitdummy::Author.new(Grit::Repo.new('.'))
-
-a.check_user_name
-a.check_user_email
-
-puts "Everything looks nice :)"
+Gitdummy.start
 
