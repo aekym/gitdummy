@@ -2,5 +2,5 @@
 
 require File.join(File.dirname(__FILE__), '../lib/gitdummy')
 
-Gitdummy.start
+Gitdummy::Cli.start
 
