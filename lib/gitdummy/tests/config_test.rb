@@ -7,7 +7,7 @@ class ConfigTest < MiniTest::Unit::TestCase
 
     # load configurable regexp to test the user's email
     #
-    regexp = Regexp.new($config['tests']['config']['user']['name_regexp'].force_encoding('utf-8'))
+    regexp = Regexp.new($config['tests']['config']['user']['name_regexp'].force_encoding('utf-8')) rescue nil
 
     assert_match regexp || /^\w+ \w+$/i, name,
       "Please correct your user.name configuration with e.g. `git config user.name 'John Doe'`. `#{name}` not accepted"
@@ -18,7 +18,7 @@ class ConfigTest < MiniTest::Unit::TestCase
 
     # load configurable regexp to test the user's email
     #
-    regexp = Regexp.new($config['tests']['config']['user']['email_regexp'].force_encoding('utf-8'))
+    regexp = Regexp.new($config['tests']['config']['user']['email_regexp'].force_encoding('utf-8')) rescue nil
 
     assert_match regexp || /^[a-z]+\.[a-z]+@\w+\.\w+$/, email,
       "Please correct your user.email configuration with e.g. `git config user.email 'john.doe@example.com'`. `#{email}` not accepted"
